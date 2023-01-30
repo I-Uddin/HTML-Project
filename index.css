@@ -1,0 +1,70 @@
+body {
+  background-image: url("../images/backdrop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* keep background fixed */
+  background-attachment: fixed;
+  /* centre background image */
+  background-position: center;
+}
+
+header > nav > ul {
+  font-size:xx-large;
+  margin: auto;
+  padding: 0;
+  /* width: 90%; */
+  background-color: #f1f1f1;
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid #555;
+}
+
+header > nav > ul > li {
+  border-bottom: 1px solid #555;
+}
+
+header > nav > ul > li:last-child {
+  /* prevent unnecessary extra border at bottom   */
+  border-bottom: none;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  color: #000;
+}
+
+/* desktop/certain devices only */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.active-page {
+  background-color: red;
+  color: white;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+footer > ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+footer > address {
+    text-align: center;
+}
+
