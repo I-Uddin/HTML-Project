@@ -11,10 +11,6 @@ body {
   /* centre background image */
 }
 
-/* main {
-  margin-bottom: 10px;
-} */
-
 main {
   margin-right: 20px;
   margin-left: 20px;
@@ -22,41 +18,90 @@ main {
 
 /* Header */
 
-header > nav > ul {
-  font-size: x-large;
-  margin: auto;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.85);
-  text-align: center;
-  list-style-type: none;
-  border: 1px solid #555;
+/* Desktop Only to make the footer and nav stretch horizontally */
+@media (min-width: 1000px) {
+  header > nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #555;
+  }
+
+  header > nav > ul > li {
+    float: left;
+    display: inline;
+    border-right: 1px solid #000;
+  }
+
+  header > nav > ul > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+    color: #000;
+  }
+
+  /* hover only shows on certain responsive devices only */
+  header > nav > ul > li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  .active-page {
+    background-color: blue;
+    color: white;
+  }
+
+  /* float last element right and left border */
+  header > nav > ul > li:last-child {
+    float: right;
+    border-right: none;
+    border-left: 1px solid #000;
+  }
 }
 
-header > nav > ul > li {
-  border-bottom: 1px solid #555;
-}
+/* Smaller Width Only to make the footer and nav vertical */
+@media not (min-width: 1000px) {
 
-header > nav > ul > li:last-child {
+  header > nav > ul {
+    font-size: x-large;
+    margin: auto;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid #555;
+  }
+  
+  header > nav > ul > li {
+    border-bottom: 1px solid #555;
+  }
+  
   /* prevent unnecessary extra border at bottom   */
-  border-bottom: none;
-}
+  header > nav > ul > li:last-child {
+    border-bottom: none;
+  }
+  
+  header > nav > ul > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    color: #000;
+  }
+  
+  /* hover only shows on certain responsive devices only */
+  header > nav > ul > li a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  .active-page {
+    background-color: blue;
+    color: white;
+  }
 
-header > nav > ul > li > a {
-  text-decoration: none;
-  display: block;
-  padding: 8px 16px;
-  color: #000;
-}
-
-/* hover only shows on certain responsive devices only */
-header > nav > ul > li a:hover {
-  background-color: #555;
-  color: white;
-}
-
-.active-page {
-  background-color: blue;
-  color: white;
 }
 
 /* Section 1 */
